@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .editor {
+            height: 100px;
+        }
+
+        .edit-panel {
+            position: relative;
+            width: 100%;
+            height: auto;
+            font-size: 14px;
+            line-height: 20px;
+            border: 1px solid;
+        }
+
+        .show-placeholder::before {
+            content: attr(placeholder);
+            position: absolute;
+            top: 4px;
+            left: 8px;
+            color: #555;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <form>
+            <input type="text">
+        </form>
+    </div>
+    <style>
+        .parent:hover input {
+            background: green;
+        }
+
+        .parent:hover form {
+            background: orange;
+        }
+    </style>
+</body>
+
+</html>
